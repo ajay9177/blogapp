@@ -1,0 +1,23 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Appbliss",
+  "license": "ISC",
+  "description": "Mern app to learn full stack development",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
