@@ -19,9 +19,5 @@
         "src": "/(.*)",
         "dest": "/client/dist/$1"
       }
-    ],
-    "static": {
-      "distDir": "client/dist"
-    }
+    ]
   }
-  
