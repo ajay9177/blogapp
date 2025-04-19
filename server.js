@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 app.use(express.json({ extended: false }));
 
-
 const withDB = async (operations, res) => {
   try {
     const client = await MongoClient.connect(process.env.MONGO_URI);
@@ -51,4 +50,10 @@ app.post("/api/articles/:name/add-comments", (req, res) => {
   }, res);
 });
 
-app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
+// Export for serverless
+module.exports.handler = serverless(app);
+
+// Remove or comment out app.listen for local testing if needed
+// if (process.env.NODE_ENV !== 'production') {
+//   app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
+// }
