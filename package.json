@@ -6,8 +6,9 @@
   "server": "nodemon server",
   "client": "npm run dev --prefix client",
   "dev": "concurrently \"npm run server\" \"npm run client\"",
-  "build": "npm run build --prefix client"
-  },
+  "build": "npm run build --prefix client",
+  "prebuild": "npm run build --prefix client"
+},
   "keywords": [],
   "author": "Appbliss",
   "license": "ISC",
