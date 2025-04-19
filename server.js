@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const { MongoClient } = require("mongodb");
 const serverless = require('serverless-http');
-const PORT = process.env.PORT || 5000;
+const path = require('path'); // Add this line
 require('dotenv').config();
 app.use(express.json({ extended: false }));
 
@@ -50,10 +50,10 @@ app.post("/api/articles/:name/add-comments", (req, res) => {
   }, res);
 });
 
+// Add catch-all route for serving index.html
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+});
+
 // Export for serverless
 module.exports.handler = serverless(app);
-
-// Remove or comment out app.listen for local testing if needed
-// if (process.env.NODE_ENV !== 'production') {
-//   app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
-// }
