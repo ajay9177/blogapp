@@ -1,21 +1,28 @@
 import React from "react";
 
 const About = () => {
-    return <div className='mb-20'>
-        <h1 className='sm:text-4xl text-2xl font-bold my-6 text-gray-900'>About</h1>
-        <p className='mx-auto leading-relaxed text-base mb-4'>
-            Hey there! 👋 I'm a tech enthusiast who loves building cool projects and sharing knowledge along the way. This blog is my little corner on the internet where I write about the things I’m learning—especially in web development.
-        </p>
-        <p className='mx-auto leading-relaxed text-base mb-4'>
-            You’ll find simple, beginner-friendly articles on topics like React, MongoDB, HTML, and more. Whether you're just getting started or brushing up on the basics, I hope these posts help you learn faster and build better.
-        </p>
-        <p className='mx-auto leading-relaxed text-base mb-4'>
-            I believe learning should be fun and practical—so I include clear examples, real-world use cases, and tips I wish I knew earlier. Feel free to explore, try things out, and reach out if you have any suggestions or questions.
-        </p>
-        <p className='mx-auto leading-relaxed text-base mb-4'>
-            Thanks for stopping by! 😊
-        </p>
-    </div>
-}
+    return (
+        <div className='mb-20'>
+            <h1 className='sm:text-4xl text-2xl font-bold my-6 text-gray-900'>About Me</h1>
+            <p className='mx-auto leading-relaxed text-base mb-4'>
+                Hi, I'm a self-taught developer with a passion for web development and building meaningful tech projects. I created this blog to simplify coding concepts for beginners and share my journey as I grow in the tech world.
+            </p>
+            <p className='mx-auto leading-relaxed text-base mb-4'>
+                My goal is to make learning development fun, easy, and less overwhelming. I mostly write about JavaScript, React, MongoDB, and other full stack technologies that I've used in my own projects.
+            </p>
+            <p className='mx-auto leading-relaxed text-base mb-4'>
+                When I’m not coding, I enjoy mobile gaming and vibing to music. 🎮🎵 This blog is my digital notebook — I hope it helps you learn faster and build confidently!
+            </p>
+
+            <h2 className='text-xl font-semibold mt-10 mb-4 text-gray-800'>My Tech Stack</h2>
+            <ul className='list-disc list-inside text-base text-gray-700'>
+                <li>💻 Frontend: HTML, CSS, JavaScript, React, Tailwind CSS</li>
+                <li>⚙️ Backend: Node.js, Express.js</li>
+                <li>🛢️ Database: MongoDB, MySQL</li>
+                <li>☁️ Cloud & Tools: AWS, Git, GitHub</li>
+            </ul>
+        </div>
+    );
+};
 
 export default About;
