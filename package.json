@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-  "server": "nodemon server",
-  "client": "npm run dev --prefix client",
-  "dev": "concurrently \"npm run server\" \"npm run client\"",
-  "build": "npm run build --prefix client",
-  "prebuild": "npm run build --prefix client"
-},
+    "server": "nodemon server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && vite build --outDir ../dist"
+  },
   "keywords": [],
   "author": "Appbliss",
   "license": "ISC",
