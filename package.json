@@ -6,7 +6,7 @@
     "server": "nodemon server",
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && vite build --outDir ../dist"
+    "build": "cd client && npm run build -- --outDir ../dist"
   },
   "keywords": [],
   "author": "Appbliss",
